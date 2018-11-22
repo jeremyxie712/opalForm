@@ -1,0 +1,968 @@
+Version 0.18.14.2:
+ -     --- Added viewport meta tag for better scalability on mobile devices     --- Added help location of firebase configs
+ - Merge branch 'hotfix-0.18.14.1'
+ -     --- Added missing key that caused push notifications not to work
+
+Version 0.18.14.1:
+
+
+Version 0.18.14.`:
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.18.14.0' into preproduction
+ - Merge branch 'hotfix-0.18.13.1' into preproduction
+ - Merge branch 'hotfix-0.18.13.1'
+
+Version 0.18.14.0:
+ - 	--- Added enabled flag to config file 		-- When database configs (other than OpalDB) are turned on/off then interface will update the Opal database accordingly 		to set on/off
+ - Merge branch 'sqlFeature' into develop
+ - 	--- Optimized database versioning scripts for initial setup
+ - Merge branch 'hotfix-0.18.13.1' into develop
+ -     --- Added missing WRM database name to config file
+ - Merge branch 'release-0.18.13.0' into develop
+
+Version 0.18.13.1:
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.18.13.0' into preproduction
+ - Merge branch 'release-0.18.12.0' into preproduction
+ - Merge branch 'hotfix-0.18.11.1' into preproduction
+ - Merge branch 'HotFix-0.18.10.1'
+
+Version 0.18.13.0:
+ -     --- Fully removed all programming default config files         -- Now there is one central config     --- Cleaned up packages
+ -     --- Starting one config file
+ - Merge branch 'release-0.18.12.0' into develop
+
+Version 0.18.12.0:
+ -     --- Added push notifications for new lab results
+ - Merge branch 'hotfix-0.18.11.1' into develop
+ - Merge branch 'release-0.18.11.0' into develop
+
+Version 0.18.11.1:
+ -     --- Added missing table
+ - Merge branch 'release-0.18.11.0' into preproduction
+ - Merge branch 'HotFix-0.18.10.1' into preproduction
+
+Version 0.18.11.0:
+ - Merge branch 'checkinFeature' into develop
+ - Merge branch 'HotFix-0.18.10.1' into develop
+ - Merge branch 'HotFix-0.18.10.1' of https://gitlab.com/akimosupremo/opalAdmin into HotFix-0.18.10.1
+ - Modified getCheckedInMediAppointments
+ -     --- Finished checkin details         -- For appointment type aliases, there is now input on check-in instructions with a provided         flag for whether or not an appointment is checkinable or not
+ -     --- Adding checkin detail support to appointment aliases
+ - Merge branch 'release-0.18.10.0' into develop
+
+Version 0.18.10.1:
+ - Fix Medivisit Check-In logic
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.18.10.0' into preproduction
+ - Merge branch 'hotfix-0.18.9.2' into preproduction
+ - Merge branch 'hotfix-0.18.9.2'
+ - Merge branch 'hotfix-0.18.9.1' into preproduction
+
+Version 0.18.10.0:
+ -     --- Changed cron settings to only output errors to logs
+ -     --- Improved log email         -- Now displaying ip address and script location for better debugging
+ -     --- Optimized queries some more
+ -     --- Removed print statement and exit statements from testing
+ -     --- Re-enabled new questionnaire system     --- Fixed bug in question form
+ -     --- Optimized queries         -- Removed for loops
+ - Merge branch 'hotfix-0.18.9.2' into develop
+ -     --- Added UTF-8 for medivisit database connection         -- There were missing codes that had accents
+ - Merge branch 'hotfix-0.18.9.1' into develop
+ - Merge branch 'release-0.18.9.0' into develop
+
+Version 0.18.9.2:
+ - Merge branch 'hotfix-0.18.9.1'
+ -     --- Fixed crash in patient location MH
+ - Merge branch 'hotfix-0.18.9.1'
+ -     --- Fixed mising definers
+ - Merge branch 'hotfix-0.18.9.1'
+
+Version 0.18.9.1:
+ -     --- Removed definer reference from triggers
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.18.9.0' into preproduction
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.18.8.0' into preproduction
+ - Merge branch 'hotfix-0.18.7.1' into preproduction
+ - Merge branch 'hotfix-0.18.7.1'
+
+Version 0.18.9.0:
+ -     --- Added email type in database revision     --- Fixed dev implentations that weren't meant to be in production     --- Fixed crash for test results
+ -     --- Removed migration files since we track from dbv
+ -     --- Cleanup of files and tracking
+ - Merge branch 'release-0.18.8.0' into develop
+
+Version 0.18.8.0:
+ -     --- Removed unused files     --- Updated security questions database logging
+ - Merge branch 'hotfix-0.18.7.1' into develop
+ -     --- Fixed issue of passing two arrays in arguments         -- Need to pass references according to perl docs
+ - Merge branch 'release-0.18.7.0' into develop
+
+Version 0.18.7.1:
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.18.7.0' into preproduction
+ -     --- Fixed missing references from new config
+ - Merge branch 'hotfix-0.18.6.4' into preproduction
+ - Merge branch 'hotfix-0.18.6.4'
+ - Merge branch 'hotfix-0.18.6.3' into preproduction
+ - Merge branch 'hotfix-0.18.6.2' into preproduction
+
+Version 0.18.7.0:
+ -     --- Optimized config for javascript/node         -- Javascript config has been converted to json. Removed global variables that         were once used for paths. Only firebase configs remain in this file. Will probably         switch to using one config file across all programming languages.         -- Removes issue where firebase configs were pointing to the wrong database when         merging branches
+ -     ---Optimized publisher queries         -- Removed references to views and used actual tables with indices         -- Optimized patient location MH to use the results from the patient location table
+ - Merge branch 'hotfix-0.18.6.4' into develop
+ -     --- Fixed wrong table name
+ - Merge branch 'hotfix-0.18.6.3' into develop
+ - Merge branch 'hotfix-0.18.6.2' into develop
+ - Merge branch 'hotfix-0.18.6.1' into develop
+ - Merge branch 'release-0.18.6.0' into develop
+
+Version 0.18.6.4:
+ - Merge branch 'hotfix-0.18.6.3'
+ -     --- Fixed issue of missing patients in publisher         -- Forgot patient SSN had expiration date so "=" clause wasn't finding SSN in Aria         -- Publisher back to taking long. Optimization needed
+
+Version 0.18.6.3:
+ - Merge branch 'hotfix-0.18.6.2'
+
+Version 0.18.6.2:
+ -     --- Disabled content nosniff         -- Caused errors in production and wouldn't get any data. Something to do with         XXS
+ - Merge branch 'preproduction'
+ - Merge branch 'hotfix-0.18.6.1' into preproduction
+ - Merge branch 'preproduction'
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'preproduction'
+ - Merge branch 'release-0.14.0'
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'master' of http://gitlab.com/akimosupremo/opalAdmin
+ - commit
+
+Version 0.18.6.1:
+ -     --- Removed sql files that are not needed in production     --- Updated git ignore to keep config file for dbv
+ - Merge branch 'release-0.18.6.0' into preproduction
+ - Merge branch 'release-0.18.5.0' into preproduction
+ - Merge branch 'hotfix-0.18.4.1' into preproduction
+
+Version 0.18.6.0:
+ -     --- Updated indexes and removed tables from tracking
+ -     --- Added triggers and revisions
+ -     --- Added database versioning package
+ - Merge branch 'release-0.18.5.0' into develop
+
+Version 0.18.5.0:
+ -     --- Added email feature to script failures         -- Will now send emails if script crashes or on multiple processes     --- Cron executions are piped to a file
+ -     --- Added logging to file for each execution
+ -     --- Added monitoring section for logging script executions
+ -     --- Added modification of user language
+ -     --- Removed user activity module
+ - Merge branch 'hotfix-0.18.4.1' into develop
+ -     --- Fixed misnamed variable name
+ - Merge branch 'release-0.18.4.0' into develop
+
+Version 0.18.4.1:
+ - Merge branch 'release-0.18.4.0' into preproduction
+ - Merge branch 'hotfix-0.18.3.2' into preproduction
+
+Version 0.18.4.0:
+ -     --- Significantly reduced publisher execution time         -- Optimized queries to group expressions based on their respective last transferred time.         Best case (which is most cases), all expressions have the same last transferred date.         Intermediate case, when new expressions have been added to the alias so there will be         two groups (1. existing expressions have last transfered of 5 mins ago, 2. new expressions         have last transferred at the beginning of time). Each group will have their "IN" clause as         a concatenation of expressions with their respective last transferred.         -- Changed "LIKE" clause for exact "=" for checking patient SSN. This significantly reduced         query execution time.         -- This has been tested for when all expressions have been aliased! Reduced time from > 3 mins         to ~ 16 seconds!
+ - Merge branch 'hotfix-0.18.3.2' into develop
+ -     --- Fixed blank tables for ui-grid in accordions
+ - Merge branch 'hotfix-0.18.3.1' into develop
+ - Merge branch 'release-0.18.3.0' into develop
+
+Version 0.18.3.2:
+ - Merge branch 'hotfix-0.18.3.1' into preproduction
+
+Version 0.18.3.1:
+ -     --- Fixed improper variable names     --- Fixed missing table column names
+ - Merge branch 'release-0.18.3.0' into preproduction
+ - Merge branch 'release-0.18.2.0' into preproduction
+ - Merge branch 'hotfix-0.18.1.1' into preproduction
+
+Version 0.18.3.0:
+ -     --- Removed console log statement
+ -     --- Fixed missing metadata from test results log
+ -     --- Added user activity logs
+ -     --- Last transferred date set based on alias type         -- Appointments set to beginning of time, others set to NOW
+ -     --- Added one-to-one legacy questionnaire setup         -- Now, once a legacy questionnaire has been referenced and set, it is removed from         the "new questionnaires" list
+ - Merge branch 'release-0.18.2.0' into develop
+
+Version 0.18.2.0:
+ - Merge branch 'contentLogFeature' into develop
+ -     --- Changed cron title in menus
+ -     --- Added cron logs to display all content publishing
+ -     --- Added all logs
+ -     --- Added all logs to aliases
+ - -- Logs for all content starting template
+ - --- Fixed issue with missing reference arguments in subroutines   -- Apparently scalar variables should be passed first before arrays
+ -     --- Added actual cron logging to publisher
+ -     --- Fixed formatting of modal headers
+ -     --- Added individual logs to legacy questionnaires
+ -     --- Added individual logs for emails
+ -     --- Added individual logs to test results
+ -     --- Added individual logs for educational material
+ -     --- Added individual logs to posts
+ -     --- Added individual logging for aliases     --- Changed variable naming for notification logs
+ -     --- Completed logs for individual notification types
+ - Merge branch 'develop' into contentLogFeature
+ - Merge branch 'hotfix-0.18.1.1' into develop
+ -     --- Fixes issue of missing expression serial for medivisit appointments
+ -     --- Added backend logic for notification logs
+ -     --- Adding error logs
+ - Merge branch 'release-0.18.1.0' into develop
+
+Version 0.18.1.1:
+ - Merge branch 'release-0.18.1.0' into preproduction
+ - Merge branch 'release-0.18.0.0' into preproduction
+ - Merge branch 'release-0.17.0.0' into preproduction
+ - Merge branch 'hotfix-0.16.0.1' into preproduction
+
+Version 0.18.1.0:
+ -     --- Disabled questionnaires (for now)         -- Waiting for polished version
+ -     --- Improved query for Medivisit appointments         -- Investigation showed that the query loop for medivisit appointments lasted a very long time.         Query is now looped like the aria appointments with the expression in the loop and not the whole query itself.
+ - Merge branch 'release-0.18.0.0' into develop
+
+Version 0.18.0.0:
+ - Merge branch 'selectAllFeature' into develop
+ -     --- Improved trigger logic         -- Checking both the case that triggers are defined and that the patient has things         to compare in the first place (eg. has doctors). Before this check wasn't made and         would still send to patient if "ALL" is defined but a patient has no appointments today for example.     --- Fixed issue where educational material triggers weren't updating upon selecting an individual trigger     --- Changed publishing logic for educational material         -- Originally woud get all patient's appointments retrospectively. But should only check for         prospective appointments. So if new patient had new start before registration, it will not send         educational material for start of radiotherapy.         -- Patient diagnosis was based on patient appointments but if patient has none, then it would seem         patient doesn't have a diagnosis. So now getting diagnosis from Diagnosis call and not from appointments.         -- Above point same for legacy questionnaires
+ -     --- Added select all functionality to publisher         -- patient will automatically pass for a given trigger if "ALL" is selected for said trigger         Else, continue respective checks as usual
+ -     --- Fixed flawed logic in publishers for triggers         -- If only patient triggers were defined, it would not have passed even if the         patient was in the list of patient triggers
+ -     --- Added select all feature to legacy questionnaire module     --- Changed all instances of "filter" to "trigger"     --- Changed all instances of "resource" to "machine"
+ -     --- Added select all feature to educational material     --- Changed all instances of "filter" to "trigger"     --- Changed all instances of "resource" to "machine"
+ - Merge branch 'develop' into selectAllFeature
+ -     --- Ignore uploads directory         -- To be used by future feature
+ -     --- Added select all feature to post triggers         -- Selecting all triggers will add a "ALL" id to the database instead of adding every existing trigger. This         also helps in case there are new triggers added (avoiding static select alls). So if select all is selected         and a new patient is added for example, then that patient gets added to the list as well         -- Changed all instances of "filter" to "trigger" to make it more explicit that these are what triggers publishing     --- Changed instances of "resource" to "machine" to make it more explicit that the select list is for treatment machines
+ -     --- Commented out preparation for handling errors
+ -     --- Changed instances of "Filter" to "Trigger"         -- This will hopefully be clearer that selecting triggers means targeting patients         with specific criteria.
+ -     --- Added functionality to only publish content when filters are defined         -- If no filters are defined, nothing will be published. Soon there will be option         to trigger by all patients, doctors, etc.
+ -     --- Added description to alias expressions         -- Fix to get resource description from MediVisit appointments         -- requires data refactoring
+ -     --- Reimplimented changes that were removed by previous reversion         -- Hyperlinks and deselect educational material are now reimplemented
+ -     --- Fixed merge conflict
+ - Revert "    --- Educational material are now tagged to specific content types -- Only educational material tagged to content type in question will show up in list E.g. Tagging educational material to Appointments will only be a selectable option to attach material in appointments"
+ -     --- Optimized updated for diagnosis translation and educational material         -- database update commands only executed on content that was updated     --- Fixed issue where confirm registration was not using the password encryption
+ -     --- Starting optimization of legacy questionnaire updates
+ -     --- Optimized updates on test results         -- Database updates only executed on updated content and not on content that stayed         the same.
+ -     --- Optimized updates on posts         -- Updates only executed for only updated content
+ -     --- Optimized updates on aliases         -- Update commands only executed when content is really updated instead of updating everything.         E.g. if only expressions were changed, then only expressions will be updated and not         the details of the alias (like names for example). And vice-versa.
+ -     --- Added sanitization for test results         -- Test results without any codes assigned to them will automatically have their         publish flag turned off to avoid crashes
+ -     --- Added sanitize feature for rich-text fields         -- All single, double quotes, and backslashes are escaped
+ -     --- Added sanitize feature to aliases         -- Since reassignement of codes can be done, publish flags are turned off for aliases         that no longer have terms assigned the them. This avoids a crash for the for loop         in getting tasks/appointments/documents foreach expression
+ -     --- Added bilingual map uploads
+ -     --- Educational material are now tagged to specific content types         -- Only educational material tagged to content type in question will show up in list         E.g. Tagging educational material to Appointments will only be a selectable option to attach         material in appointments
+ -     --- Fixed display of current assigned clinical codes not updating upon selecting assigned codes
+ -     --- Disabled content sniffing
+ - Merge branch 'release-0.17.0.0' into develop
+
+Version 0.17.0.0:
+ -     --- Added functionality to reassigned aliases, diagnosis translations, and test results         -- Selecting an already assigned code will warn user of reassignment and reassign upon submit
+ -     --- Added tab to show currently assigned codes for alias, test result, and diagnosis translation     --- Added tab filters to test results     --- Added auto complete for opposite language when selecting a test group
+ -     --- Added patient registration date to record         -- This will make sure no retrospective documents will get added         or at least we add documents since registration in case new clinical codes are added         to existing aliases
+ -     --- Added push notification upon appointment cancellation     --- Fixed style issue on add notification page
+ -     --- Added push notification on appointment change         -- time change must be greater than an hour         -- modified an existing notification code to use this functionality         -- changed notification type column to use serial instead of id for proper linking
+ -     --- Removed flag that got all diagnoses
+ -     --- Publisher provides staging info for diagnoses
+ -     --- Fixes issue where selected educational material doesn't show in summary
+ -     --- Downgraded font awesome from 5 to 4         -- textAngular still uses version 4 and migration file does not work         -- required fixing class names     --- Added rich-text to all previously plain-text description fields
+ - --- Started verbose print statements
+ - Merge branch 'hotfix-0.16.0.1' into develop
+ -     --- Fixed missing template reference after restruction
+ -     --- Redesigned template and controller structures         -- removed all instances of script injections on html pages and made it its own html template.         Eg: a template was injected for edit post on the post.html. Now it's its own template in edit.post.html         -- same goes with the controllers. Now every "edit" and "delete" functionality has its own controller         -- see directory tree for design but basically each feature has its own directory (alias, post, questionnaire, etc)         -- Now, edits, deletes, adds are fully separated
+ -     --- Starting to restructure directories and separate templates/controllers
+ -     --- Bolded the titles in content tables     --- Changed format of session duration in user activity
+ -     --- Upgraded fontawesome icons         -- Required changing some class names in template files     --- Added user activity log page         -- Login logout times
+ -     --- Added user logging to the following features         -- Modified content is now recorded in the database within a particular session.
+ - --- Added session and user tracking for manipulated email control
+ - --- Added user tracking for educational material control manipulation   -- Incomplete however, need to figure out how to handle table of contents logic
+ -     --- Added user logging for diagnosis translation         -- Modifications on this content is recorded in the database by who and session
+ -     --- Added logging of logins and logouts         -- Now each login and logout is recorded in the database with a sessionid     --- Added change logs for Alias events         -- Now changes to the alias pages are recorded in the database with a sessionid and         user who changed the entity
+ -     --- Added more sophisticated session logging         -- Session id now made per login in the backend (attached to user)         -- In cookies for now, but will log sessions in database
+ -     --- Same fix as previous commit
+ -     --- Added missing requires of the Encrypt service
+ -     --- Added password encryption between frontend/backend communication         -- All passwords are now encrypted before firing a POST request to the backend so that         passwords are illegible even if someone tries to look at request data
+ -     --- Included bowerrc to bypass SSL signing for bower installs     --- updated htaccess with some added security         -- Note that directory listing is already implemented
+ - Merge branch 'release-0.16.0.0' into develop
+
+Version 0.16.0.1:
+ - --- Fixes single quotes in clinical codes that were causing query strings to escape and crash
+ - Merge branch 'release-0.16.0.0' into preproduction
+ - Merge branch 'release-0.15.0.0' into preproduction
+ - Merge branch 'release-0.14.1' into preproduction
+ - Merge branch 'release-0.13.0'
+ - Merge branch 'hotfix-0.12.8'
+
+Version 0.16.0.0:
+ -     --- Added functionality to change youtube links         -- Embed can only display in the app so added function to change youtube urls         into proper embed urls
+ -     --- Register patient in QuestionnaireDB when registering a new patient in opalAdmin
+ -     --- Fixed bug where new step didn't show after choosing an alias type     --- Fixed syntax in educational material URL field placeholders     --- Fixed missing educational material section when adding an alias
+ -     --- Added introduction text HTML field
+ - Merge branch 'frequencyFeature' into develop
+ -     --- Added appointment status filter to new legacy questionnaire page
+ -     --- Removed "repeat once" option from frequency filter         -- By default, it will only publish once so it's redundant     --- Added conditional logic for recurring filters         -- If appointment, status, checkin, or frequency filters are defined,         it will flag to check if the questionnaire has been published today (to         publish according to recurring schedule, but no more than once a day). If not,         it will check it has been published for all time (to publish only once forever).
+ -     --- Trigger update on changing repeat interval
+ -     --- Reverted auto-increment optimization in commit: 66ed1b5f961799023b7085c71461a5ea3629791b         -- Turns out auto-increment still augments even after update         (See: https://stackoverflow.com/questions/23516958/on-duplicate-key-auto-increment-issue-mysql)         -- Optimized by removing FrequencyEventsSerNum in database since it will never be used.         Only metas set will display in table instead of the '*' wildcard for unused meta keys         -- Reverted scripts that were manipulating '*' wildcards
+ -     --- Fixed crash on settings when switching from custom freuqncy to preset frequency
+ -     --- Optimized frequency filter         -- To avoid auto increment primary key to potentially increase to a very large number         after every update to the legacy questionnaire (because it would delete everything         and put the new settings in the FrequencyEvents table), all settings are "flushed"         (i.e. all metas are wildcarded '*') and new settings are updated in the database.         This avoids having new FrequencyEventsSerNum values for every update.         This is a tradeoff between having low FrequencyEventsSerNum values with 9 static allocated         rows and potentially high FrequencyEventsSerNum with allocated rows corresponding to the         settings made (min:0, max:5 rows)         -- MetaKey's now have a pipe delimeter to identify the type of meta key and associate the         metakey to the corresponding legacy questionnaire (note the 'lqc' = LegacyQuestionnaireControl         -> underscore serial number of the legacy questionnaire control)
+ -     --- Finished publisher logic for frequency filter     --- Will optimize metas
+ -     --- Fixed crashes     --- Almost completed the publisher of legacy questionnaires based on frequency filters
+ -     --- Started publisher logic for frequency filter         -- Will retrieve loegacy questionnaires that fall under the defined frequency intervals
+ -     --- Added update functionality to frequency filter         -- Updates can now successfully be updated in the database
+ -     --- Able to retrieve frequency settings from the database
+ -     --- Testing
+ -     --- Further developments to filter
+ -     --- Added frequency interval for publishing legacy questionnaires
+ - Merge branch 'release-0.15.0.0' into develop
+
+Version 0.15.0.0:
+ -     --- Fixed failed publishing issue         -- When more than one patient filter is defined, the logic would fail to see an         existance of a patient in the filter list even though it is there. Marked down as         a coding error. Changed logic to check if it does exist. The else contains the next statement.
+ -     --- Added checkin and appointment status filters to legacy questionnaires
+ -     --- Fixed bug where save changes button didn't enable when updating a filter     --- Changed publisher to use alias appointment filters instead of aria expressions
+ - --- Made section variables more meaningful --- Changed "terms" filter to appointment alias filter now
+ - --- Made variables more meaningful for sections
+ - --- See above
+ - --- Removed expression references to these files --- Made clearer variable names
+ -     --- Changed expressions to alias appointment filter     --- Added environment to build display
+ - --- Merge
+ -     --- Added favicon
+ - Merge branch 'release-0.14.1' into develop
+ - --- Setting up for versioning
+ - 	--- Lockfile suggested
+
+Version 0.14.1:
+ -     --- Added branch info to build display
+ -     --- Added version and build display on bottom right
+ -     --- Bug fixes
+ -     --- Fixed issues
+ - --- Added autocomplete to educational material types     -- When choosing a type, the corresponding other language will autocomplete in order to match the right types in both languages
+ - Merge branch 'release-0.14.0' into develop
+
+Version 0.14.0:
+ -     --- Changed settings in gruntfile
+ -     --- Added gruntfile to track version in package.json
+ -     --- Added mobile support to pages above     --- Finalized mobile support
+ -     --- Added mobile support for the above files
+ -     --- Added mobile support for posts and educational material
+ -     --- Further fixes for mobile design     --- Added mobile support for patient registration     --- Adding mobile support for posts
+ -     --- Finished mobile support for home and alias pages
+ -     --- More design implementation         -- responsive delete and edit         -- responsive add with summary display
+ -     --- Added navbar for mobile view     --- Redesigning for mobile/tablet support
+ -     --- Preliminary design changes for mobile/tablet devices
+ - Merge branch 'release-0.13.0' into develop
+
+Version 0.13.0:
+ -     --- Changed time format for check in notifications based on language
+ -     --- Added functionality to see assigned clinical codes         -- Already assigned clinical codes are disabled in the checkbox and shows         which alias it has been assigned to         -- Selected codes show up in green     --- Fixed filter bug when selecting all terms
+ -     --- Added display for assigned diagnoses         -- Diagnoses assigned to another translation will show up as gray and disabled         with information on which translation the diagnosis is assigned to         -- Selected diagnoses are in green     --- Added tabs to filter assigned diagnoses
+ -     --- Changed instances of "expression" or "terms" or "internal hospital code" to "Appointment/Task Code"     --- Added better legeability
+ -     --- Fixed typo in side menu     --- Fixed breadcrumb linking to the wrong pages
+ -     --- Removed seconds from the check in notification
+ -     --- Fixes issue of update button not getting enabled after editing test results
+ - --- Chages date time format of check in notification to use only time in 24 h
+ - Merge branch 'hotfix-0.12.8' into develop
+ -     --- Fixes syntax error on variable name that caused a crash on undefined object     --- Fixes issue where document could not be found because of blank spaces after the expression name
+ - Merge branch 'release-0.12.7' into develop
+
+Version 0.12.8:
+ - Merge branch 'release-0.12.7'
+ - Merge branch 'release-0.12.6'
+ - Merge branch 'release-0.12.5'
+ - Merge branch 'release-0.12.3'
+ - Merge branch 'release-0.12.2'
+ - Merge branch 'release-0.12.1'
+ - Merge branch 'release-0.12.0'
+
+Version 0.12.7:
+ -     --- Bug fixes
+ - --- Added frontend for additional links
+ -     --- Added backend tracking of additional links for test results
+ -     --- Changed missing 512 password encryption
+ - Merge branch 'release-0.12.6' into develop
+
+Version 0.12.6:
+ -     --- Fixes issue of patients getting material that are not supposed to get         -- In the process of adding diagnosis control, the "AliasName" became deprecated         however, this affected the diagnosis filter and caused the removal of all diagnosis         filters for educational material for example. So some educational materials where         inappropriately sent to patients.
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin into develop
+ - Merge branch 'release-0.12.5' into develop
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin into develop
+ - --- Put code in place for validating shared url on educational material
+
+Version 0.12.5:
+ -     --- Fixes issue of corrupted image         The Sybase DBI (or Aria database) has a max length of 4096 for query results.         My guess is that this happened during the virtualization of the Aria database servers.         Had to increase the max length in order to get the rest of the image hex.
+ - Merge branch 'release-0.12.3' into develop
+
+Version 0.12.3:
+
+
+Version 0.12.4:
+ -     --- Added automatic url type to educational material control table         -- Not only validates urls but also sets the appropriate url type so app can properly load         educational material
+ -     --- Added backend educational material allowable extensions         -- Based on AllowableExtension table in the database
+ - Merge branch 'release-0.12.2' into develop
+
+Version 0.12.2:
+ -     --- Fixes issue where radio buttons for educational material weren't auto selected on load.     --- Fixes other bugs related to diagnosis translation functionality
+ -     --- Bug fixes
+ - --- Added diagnosis translation to web app
+ - Merge branch 'release-0.12.1' into develop
+
+Version 0.12.1:
+ -     --- Changes made by Yick and James
+ - Merge branch 'release-0.12.0' into develop
+
+Version 0.12.0:
+ - Merge branch 'OpalAdmin_Expression_To_Internal_Hospital_Code' into develop
+ - Merge branch 'testResultFeature' into develop
+ -     --- Added educational material to test results     --- Reorganized test group field when creating new test result
+ -     --- Added publisher control to test results
+ - Changed the Expression to internal hospital code
+ - Merge branch 'release-0.11.7' into develop
+ - Merge branch 'release-0.11.7'
+ - Merge branch 'release-0.11.6'
+ - Merge branch 'release-0.11.5'
+ - Merge branch 'release-0.11.4'
+ - Merge branch 'master' of https://gitlab.com/akimosupremo/opalAdmin
+ -     --- Fixed crash caused by invalid column name
+ - Merge branch 'hotfix-0.11.3'
+ - Merge branch 'hotfix-0.11.3'
+
+Version 0.11.7:
+ -     --- Fixes #1 where there was an empty expression list         -- Actually, worked as intended since waiting room management system wasn't         set up as a source database in production. Added functionality that ignored         source databases that aren't setup when adding a new alias.
+ - Merge branch 'release-0.11.6' into develop
+
+Version 0.11.6:
+ - Added feature request issue template
+ - Delete issue_template.md. Templates located elsewhere
+ - Created Bug template for issue templates
+ - Add new file
+ - Added an issue template file for future issue reports
+ - Merge branch 'release-0.11.5' into develop
+
+Version 0.11.5:
+ -     --- Remove unnecessary files
+ - Merge branch 'patientFilter' into develop
+ -     --- Removed backend filter of deseased patients         -- Now will show deseased patients in the patient list in opalAdmin         Was initially filtered because deseased patients will no longer be using the app.         But in this case, a family member still wanted access to their mother's chart         So I was asked to unblock the patient but in order to do that, this fix allows         them to show up in the list to then click "unblock"
+ -     --- Changed declarations and returns         -- This is on behalf of someone else editing this file
+ -     --- Fixed a bug that could retrieve questionnaire filters     --- Reordered the patient filter on templates
+ - --- Missed a file to add patient filter to
+ - --- Added patient filter to legacy questionnaires
+ - --- Added end to end patient filters to questionnaires
+ - --- Added end to end patient filter to posts
+ - --- Added patient field to the editing of educational material
+ -     --- Fixed up logic for educational material publisher
+ - Merge branch 'develop' into patientFilter
+ - Merge branch 'release-0.11.4' into develop
+ - --- See previous commit message
+ - --- Added end-to-end patient-specific filter to educational material --- This commit also staging changes that were made on the develop branch but seemed to be removed because this git repo is in a icloud directory
+ - --- Added backend functionality to get a list of patients --- Fixed task issue that caused a crash in publish manager
+
+Version 0.11.4:
+ -     --- Removed hardcoded config
+ - Merge branch 'push-checkin-notification' into develop
+ -     --- Removed file
+ -     --- Added push notification functionality for checkin
+ - --- Added patient-specific filter to frontend and to publisher
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ - Merge branch 'hotfix-0.11.3' into develop
+ -  - New push check-in notification
+ - Merge branch 'release-0.11.2' into develop
+ - --- Changed most instances of the term "array" to "details" for better legibility
+
+Version 0.11.3:
+
+
+Version 0.11.3:
+
+
+Version 0.11.3:
+
+
+Version 0.11.2:
+ -     --- Removed commented code on notification insert for calling patients         -- Since there is a view in the app for it
+ -     --- Added stricter password requirements for patient registration         -- Password now must contain at least one capital letter and at least one number
+ - Merge branch 'release-0.11.1' into develop
+
+Version 0.11.1:
+ - Merge branch 'checkin' into develop
+ - 	--- Check In Notification Module : send a notification to the user device that they are checked in.
+ - Merge branch 'release-0.11.0' into develop
+
+Version 0.11.0:
+ - Merge branch 'oldQuestionnaire' into develop
+ -     --- Fixed syntax and comma issue of Appointments crashing     --- Added missing demographic filters to legacy questionnaires
+ - --- Added legacy questionnaire setup to publisher
+ -     --- Added new legacy questionnaire feature.         -- Frontend and backend complete         -- ToDO: publisher
+ - Merge branch 'hotfix-0.10.3' into develop
+ -     --- Added new migration file to change table name
+ - Merge branch 'release-0.10.2' into develop
+
+Version 0.10.3:
+ -     --- Removed illegal character
+ - Merge branch 'release-0.10.2'
+ - Merge branch 'release-0.10.1'
+ - Merge branch 'release-0.10.0'
+ - Merge branch 'release-0.10.0'
+ - Merge branch 'release-0.9.5'
+ - Merge branch 'release-0.9.5'
+ - Merge branch 'release-0.9.4'
+ - Merge branch 'release-0.9.4'
+ - Merge branch 'release-0.9.3'
+ - Merge branch 'release-0.9.2'
+ - Merge branch 'release-0.9.1'
+ - Merge branch 'release-0.9'
+ - Merge branch 'release-0.8.1'
+ - Merge branch 'release-0.8'
+ - Merge branch 'hotfix-0.7.6'
+
+Version 0.10.2:
+ -     --- Changed encryption from SHA256 to SHA512
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ - Merge branch 'release-0.10.1' into develop
+ - Update README.md
+
+Version 0.10.1:
+ -     --- Created a temporary table called QuestionnaireControlNew and adjusted scripts accordingly         -- The old questionnaire system already has a table named QuestionnaireControl. So         to avoid overwritting, we will execute a phase in / phase out so that when we're ready         to use the new questionnaire system, we will change the table names/scripts accordingly.
+ -     --- Added install access functionality (not completed)
+ -     --- Added a new file to handle config file generations
+ -     --- Set default install access flag to true         -- Makes sense considering the first installation of opalAdmin requires default access
+ -     --- Missed the removal of the "delete" header tag from previous commit
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ - --- No longer using Grunt --- Fixed #1 --- Linted installationController to remove spaces and replace with tabs
+ - Update README.md
+ - Updated README.md
+ - Updated README.md
+ - -- modified line 5 "questionnaire-manage" to "questionnaire"
+ - Update README.md
+ - -- remove ng-change=“usernameUpdate()” on line 572 and ng-change=“passwordUpdate()” on line 584 because it is no longer required.
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ - -- accidentally overwritten Ackeem modification on line 118, so changed it back from url: '/questionnaire/' to url: '/questionnaire'
+ - Update README.md
+ - -- Modified test-result.html on lines 172 & 177 ng-change=“descriptionUpdate()” to ng-change=“setChangesMade()”
+ - --- Minor change to questionnaire url
+ - --- Missed container classes from previous commit
+ - --- Fixed issue where current page wasn't highlighted in changed questionnaire menus
+ - --- Fixed issue where alias educational material was not auto filled in list
+ - --- Fixed deprecated PHP file call
+ - --- Fixed merge errors
+ - --- Renamed files to more sensible names     -- For better readability and understand of each script without necessarily having to open the file     -- Words in PHP files in /php and /api are now separated by underscores and lowercases (for consistency)     -- Prefixes added to each PHP filename that either gets, insert, deletes, or updates (for better readibility)
+ - 	--- Added phpstorm gitignore 	--- fixed indentation
+ - Merge branch 'release-0.10.0' into develop
+ -     --- Debugged queries
+
+Version 0.10.0:
+ -     --- Migration file for changes made to the database
+ - --- Fixed formatting on zoomed in login page
+ - --- Added padding
+ - --- Redesigned side menu for adding content
+ - --- Added bold titles to accordions
+ - --- Delete modal had "Post" and not "Questionnaire"
+ - --- Added processing modal --- Fixed code copy
+ - --- Added missing content for filters
+ - --- Added filters to questionnaire creation
+ - --- bold the accordion titles
+ - --- Whoops didn't change another filter nest search function call
+ - --- Fixed issed where question group key could not be found
+ - --- Fixed issue where duplicate close processing modal call
+ - --- Added filters to edit questionnaires
+ - --- Added questionnaire control to publisher
+ -     --- Fixed design of empty completed questionnaires page
+ - --- Testing the placement of back button
+ - --- Added text for empty completed questionnaires
+ - --- Removed white space in one of the text area forms
+ - --- Improved readability of code
+ - --- Changed variable name in backend that was changed on frontend
+ - --- Refactored code for better readability
+ - --- Added Questionnaire module to publisher --- Fixed format in collectionsJS --- Testing a change from success callback to then callback
+ -     --- Improved functionaility when editing questionnaires         -- Existing tags were not showing up when opening the accordion in the edit modal         -- Current groups were not preselected in the table in the group section of the edit modal         -- There was a bit of confusion between current and new groups as one could add the same             group even if it already existed in the object
+ - --- Debugging
+ - --- Fixing bugs on questionnaire edit
+ -     --- Modifications
+ -     --- Fixed breadcrumb designs
+ -     --- Redesigned questionnaire pages to more consistent design of the rest of the website
+ -     --- Fix missing comma in controllers     --- Added SQL migration file for questionnaires
+ - Merge branch 'questionnaire' into develop
+ - Questionnaire interface: fixed the bug that page drop form didn't show correctly
+ - questionnaire interface
+ - questionnaire interface
+ -     --- Improved transparent side menu
+ -     --- Added "DEV" mode for opal Admin titles         -- DEV will appear for dev environments (from config file)
+ - Merge branch 'release-0.9.5' into develop
+ -     --- Fixed issue of ordered table creation
+ - 	--- Commit
+ - 	--- Committed on behalf of Qi (AJ)
+ - 	--- Committing on behalf of Qi (AJ)
+ - 	--- Added questionnaire bits
+
+Version 0.9.5:
+ -     --- Removed Venue index from PLs         -- VenueSerNums can be 0 if a stored procedure to uncheckin a patient occurs (no resource/venue)
+ -     --- Added SQL migration for patient location
+ - --- Added patientlocation support in publisher
+ -     --- Added text to questionnaires
+ - Merge branch 'release-0.9.4' into develop
+ -     --- Moved to migration files
+
+Version 0.9.4:
+ -     --- Switched to "migration" files
+ -     --- Added sql changes to update databases
+ - --- Added new roles
+ - Merge branch 'release-0.9.3' into develop
+
+Version 0.9.3:
+ -     --- Fixed issue where cron settings wouldn't work on bash shells         -- Now forces bash command regardless of local shell environment
+ - Merge branch 'release-0.9.2' into develop
+
+Version 0.9.2:
+ -     --- Redesigned login pages
+ - Merge branch 'release-0.9.1' into develop
+
+Version 0.9.1:
+ -     --- Added fixed summary function
+ -     --- Redesigned patient registration pages
+ -     --- Redesigned pages
+ -     --- Redesigned user pages
+ -     --- Redesigned test result, notification, email, and cron pages
+ -     --- Redesigned hospital map pages
+ -     --- Redesigned educational material pages
+ -     --- Redesigned post pages
+ -     --- Changed design on alias pages
+ -     --- Added access level selection on registration page
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ -     --- Fixed system call
+ - --- Fixed consent form expiration date
+ - --- Fixed query bug
+ - --- Optimized alias queries
+ - --- Further optimization
+ - --- First optimization of queries
+ - --- Changed all instances of name to subject for email
+ - --- Added publisher email functionality
+ - --- Fixed issue where type display improperly
+ - --- Fixed another bug
+ - --- Fixed bug
+ - --- Fixed mismatched function name
+ - --- Fixed issues
+ - --- Debugging
+ - --- Fixed missing files
+ - --- Added insert, remove, update email
+ - --- Added route to email
+ - --- Added email backend
+ - --- Improved design --- Added email template and controller
+ - --- Added functionality where only valid test results are published
+ - --- Debugged password update and block features
+ - --- Added block and update password functionality. To test
+ -     --- Added require js
+ -     --- Uncommented Firebase sections
+ - --- Fixed bug
+ - --- Added toggle block
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ - --- Adding patient editing
+ - 	--- Fixed blank schema
+ - Merge branch 'release-0.9' into develop
+ -     --- Fixed issue where patient could not be added to database upon registration         -- Actually a database issue. For some reason I cannot set the DateOfBirth to be NULL
+ - --- Added consent form creation on registration
+
+Version 0.9.0:
+ -     --- Fixed issue where final checklist was not completing the form on registration     --- Updated config to include firebase project ID
+ - --- Added questionnaire button on home page
+ - --- Renamed files
+ - --- Removed convertDateTime function. Now converting date directly in query
+ - Merge branch 'release-0.8.1' into develop
+
+Version 0.8.1:
+ - Merge branch 'develop' of https://gitlab.com/akimosupremo/opalAdmin-dev into develop
+ - --- Removed config include that caused JS to crash
+ - Merge branch 'release-0.8' into develop
+ -     --- Fixed issue where Firebase init was getting called more than once         -- On first visit to patient registration, an initializer is created and persists.         When visiting the page again, it would crash since the controller was trying to         initialize another FB instance.         -- Relocated instance into JS configs where it would be called once
+ -     --- Reinstated PDO connections for MSSQL databases
+ -     --- Fixed permission issue for non-admin roles
+
+Version 0.8.0:
+ - --- Fixed process exit
+ - --- Fixed issue where document list didn't show on new alias
+ -     --- Added patient blocking and email system
+ - --- Added firebase admin to block users --- Changed MSSQL connection calls (temporary for now)
+ - --- Added final checklist to patient registration
+ - --- Improved design
+ - --- Added block patient functionality --- Added paediatric check with block (not complete) --- Made patient registration on own tab --- Improved design of menus
+ -     --- Added site-wide language based on logged in user         -- Only for patient registration page for now     --- Added dynamic security question load based on site language
+ - --- Added French language to patient registration
+ - --- Updated files from lint feedback
+ -     --- Added bower, grunt, and npm support     --- Updated html to fix angular-bootstrap upgrade     --- Fixed syntax errors according to jsLint (damn semicolons...)
+ -     --- Added disable flag on decease with message
+ -     --- Added last updated column on alias and edu mat tables     --- Added death date tracking to patient
+ -     --- Changed user-readable instances of "Alias" to "Tasks/Appointments/Documents"
+ -     --- Fixed issue where added expressions did not show correctly when editing document-type aliases         -- Fixed this by RTRIM'ing the expressions         -- Original issue arose because the expression changed from Scan CT to CT Scan in ARIA
+ - Merge branch 'hotfix-0.7.6' into develop
+ - Merge branch 'hotfix-0.7.4' into develop
+ -     --- Included security answers in schema
+ - 	--- Added creation of local clinical documents folder on installation 		-- Since it is gitignored 	--- No longer ignoring htaccess
+ - Merge branch 'release-0.7.3' into develop
+
+Version 0.7.6:
+ -     --- Upper cased security answers before hash (needed for app)
+ - Merge branch 'master' of https://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'hotfix-0.7.4'
+ - Update README.md
+
+Version 0.7.4:
+ - Merge branch 'release-0.7.3'
+ - Merge branch 'master' of https://gitlab.com/akimosupremo/opalAdmin
+ - Merge branch 'release-0.7.2'
+ - Add readme.md
+ - Merge branch 'release-0.7.1'
+ - Merge branch 'release-0.7'
+ - Merge branch 'release-0.6.1'
+
+Version 0.7.3:
+ - 	--- Fixed incorrect educational material include filename 	--- Added DateAdded column to insert hospital maps 	--- Fixed syntax error in notification control delete function 	--- Fixed issue where registration would still continue if no database present 	--- Fixed clinical database dependenecy crash for test result
+ -     --- Added Database class call in default config
+ -     --- Fixed issue with missing default value in some fields on schema
+ -     --- Fixed issue where site would crash if Aria was not defined         -- Implemented the same source database check as in the backend, so the proper         source database information would load (if enabled)
+ -     --- Adding database class to properly call source database
+ - Merge branch 'release-0.7.2' into develop
+
+Version 0.7.2:
+ -  --- No default configs needed for this file
+ -     --- Added salt to register user function (was missing)
+ -     --- Fixed missing config file call in backend push notification scripts
+ - Merge branch 'release-0.7.1' into develop
+ -     --- Finalized install setup
+ -     --- Added more refined clinical database connection logic         -- Now data transfers from source database will only occur if they have been enabled for use.         -- Same for document path definitions - will only transfer clinical documents if paths are defined.         -- This allows opalAdmin backend to function independent of clinical database / FTP credentials.
+ -     --- Removed htaccess php dependency         -- Now calling PHP config file via __DIR__ in every php script
+ -     --- First test with installation. Works.
+ -     --- Pre-test completed installation site
+ -     --- Added Patient MRN to the registration process         -- Now users must enter both a medicare card number and an MRN to search in ARIA         and proceed with registration
+ -     --- Created a registrant role         -- This role can only view a list and register patients
+
+Version 0.7.1:
+ - Merge branch 'release-0.7' into develop
+
+Version 0.7.0:
+ -     Removed old file
+ -     --- Integrated backend     --- Improved naming of constants
+ - Merge branch 'release-0.6.1' into develop
+ -     -- Reincluded VERSION AND CHANGES files
+ - Version bump to 0.6.1
+
+Version 0.6.1:
+
+
+Version 0.6.1:
+ - Merge branch 'master' into develop
+ -     --- Updated configuration files         -- Removed unused constants         -- Renamed constants into a more meaningful name
+ - Merge branch 'master' of https://gitlab.com/akimosupremo/opalAdmin-frontend
+ -     --- Removed files after submitting a new gitignore
+ - Delete .htaccess
+ -     --- Added default htaccess for master
+ -     --- Included libraries considering they are static anyway and should be in master
+ - Merge branch 'release-0.6' into develop
+ - Merge branch 'release-0.6'
+ - Version bump to 0.6.0
+ -     --- Added full role functionality (limit one per user)     --- Removed session start from logout script
+ -     --- Added roles to each user on the backend
+ -     --- Set default to filter non-disabled posts
+ -     --- Added disabled flags to posts
+ -     --- Added user operations (edit/delete)
+ -     --- Added user registration
+ - Merge branch 'release-0.5.3' into develop
+ - Merge branch 'release-0.5.3'
+ - Version bump to 0.5.3
+ -     --- Added users page
+ -     --- Started adding users page functionality
+ -     --- Removed currentUser from rootScope         -- Now all handled in Session service     --- Remove all lingering PHP Session variables     --- Added change password functionality
+ -     --- Page content now hidden during session timeout     --- Reduced session timeout to 6 minutes of inactivity
+ -     --- Added more responsiveness to the web page     --- Added loading message to long ui grid loads
+ - Merge branch 'release-0.5.2' into develop
+ - Merge branch 'release-0.5.2'
+ - Version bump to 0.5.2
+ -     --- Removed client-side php     --- Improved routing by using more ui router instead of js redirects
+ - Merge branch 'release-0.5.1' into develop
+ - Merge branch 'release-0.5.1'
+ -     --- File location needs to be specified in update_crontab.php file since     it's being called remotely.
+ - Version bump to 0.5.1
+ - Merge branch 'userFeature' into develop
+ - Merge branch 'p4p' into develop
+ -     --- Implemented user session with roles in pure javascript
+ -     --- Added links to breadcrumbs
+ -     --- Added column filtering
+ -     --- Added patients for patients announcement     --- Fixed issue where post type was not inserted properly
+ -     --- Generalized constants and variable names     --- Added better support for distribution
+ -     --- Remove include once from all php scripts. Now in one htaccess!
+ -     --- Added patient activity
+ - Merge branch 'feedback' into develop
+ -     --- Added rating system view in educational material
+ -     --- Renamed all instances of ATO to opalAdmin (including directories)
+ - Merge branch 'release-0.5' into develop
+ - Merge branch 'release-0.5'
+ -     --- Minor UI fix
+ - Version bump to 0.5.0
+ - Merge branch 'newDesign' into develop
+ -     --- Final development in design branch     --- Prepared further development for future functionality
+ -     --- Implemented patient registration functionality
+ -     --- Further developments into the new design         -- Finished existing pages.         -- Working on new pages.
+ -     --- Further design changes
+ -     --- Redesigned educational material
+ -     --- Completed new alias page design update
+ -     --- Further implementation design change in newAlias
+ -     -- Redesigned home and Alias pages
+ -     -- Removed duplicate ignores
+ - Merge branch 'colorTag' into develop
+ -     -- Remove config from tracking
+ - Merge branch 'release-0.4' into develop
+ -     -- Included php config in ignore
+ - Merge branch 'release-0.4'
+ - Version bump to 0.4.0
+ - Merge branch 'demographics' into develop
+ -     --- Added demographic logic         -- Now users can filter by age group and sex
+ - Merge branch 'hotfix-0.3.3' into develop
+ - Merge branch 'hotfix-0.3.3'
+ -     --- Fixed issue where ARIA filters were not populated         -- Removed "use variansystem" and defined explicitly in FROM clause
+ -     --- Changed ARIA setting
+ -     --- For some reason this file got deleted. Added back in
+ - Merge branch 'hotfix-0.3.2' into develop
+ -     -- removed config.php from gitignore
+ - Merge branch 'hotfix-0.3.2'
+ -     --- Changed all static function calls to non-static function calls         -- All functions are non-static so calling a class function using "::" would throw an error         since that is a static function call. This was fixed by initializing a new object and         calling the object function using "->". This is a non-static function call.
+ - Version bump to 0.3.2
+ -     -- Removed file from tracking. SHOULD NOT BE THERE!
+ - Merge branch 'hotfix-0.3.1' into develop
+ - Merge branch 'hotfix-0.3.1'
+ -     --- Replaced overflow of text with ellipses on eahc Name column         -- Better readability.
+ - Version bump to 0.3.1
+ -     -- Ignored php configs
+ - Merge branch 'release-0.2' into develop
+ - Merge branch 'release-0.2'
+ - Version bump to 0.3.0
+ - Merge branch 'mediVisit' into develop
+ -     --- Ignored images directory
+ -     --- Implemented color tags.         Now icon colors can be chosen for each task, appointment and document for use in Opal.
+ - Merge branch 'hotfix-0.1.2'
+ -     --- Removed remote directory dependency.         Now hospital maps are generated locally.
+ - Version bump to 0.1.2
+ -     --- Updated gitignore to ignore images directory
+ -     --- Removed dependency of a remote directory for hospital maps.         Set images to show up locally.
+ -     --- Updated config file to use utf-8 charset in MySQL
+ - Merge branch 'hotfix-0.1.1' into develop
+ - Merge branch 'hotfix-0.1.1'
+ -     --- Fixed an issue that caused the alternation of EN and FR names and descriptions in Posts         Variables were set in opposite order.
+ - Version bump to 0.1.1
+ -     --- Updated gitignore to include config.php file.         Now each branch will have a respective config.php file to use the proper MySQL database.
+ -     -- Updated gitignore further to include config.php file for each branch.
+ -     --- Updated gitignore to include config.php file.         Now each branch will have a respective config.php file to use the proper MySQL database.
+ -     --- Updated gitignore to ignore master config file.         Now each branch will have a respective config.php file to use the proper MySQL database.
+ -     --- Added WaitRoomManagement source database functionality. Updated scripts accordingly.
+ - Merge branch 'release-0.1' into develop
+ - Merge branch 'release-0.1'
+
+Version 0.1.0
+ - Merge branch 'master' into develop
+ -     --- Updated configuration files         -- Removed unused constants         -- Renamed constants into a more meaningful name
+ - Merge branch 'master' of https://gitlab.com/akimosupremo/opalAdmin-frontend
+ -     --- Removed files after submitting a new gitignore
+ - Delete .htaccess
+ -     --- Added default htaccess for master
+ -     --- Included libraries considering they are static anyway and should be in master
+ - Merge branch 'release-0.6' into develop
+ - Merge branch 'release-0.6'
+ - Version bump to 0.6.0
+ -     --- Added full role functionality (limit one per user)     --- Removed session start from logout script
+ -     --- Added roles to each user on the backend
+ -     --- Set default to filter non-disabled posts
+ -     --- Added disabled flags to posts
+ -     --- Added user operations (edit/delete)
+ -     --- Added user registration
+ - Merge branch 'release-0.5.3' into develop
+ - Merge branch 'release-0.5.3'
+ - Version bump to 0.5.3
+ -     --- Added users page
+ -     --- Started adding users page functionality
+ -     --- Removed currentUser from rootScope         -- Now all handled in Session service     --- Remove all lingering PHP Session variables     --- Added change password functionality
+ -     --- Page content now hidden during session timeout     --- Reduced session timeout to 6 minutes of inactivity
+ -     --- Added more responsiveness to the web page     --- Added loading message to long ui grid loads
+ - Merge branch 'release-0.5.2' into develop
+ - Merge branch 'release-0.5.2'
+ - Version bump to 0.5.2
+ -     --- Removed client-side php     --- Improved routing by using more ui router instead of js redirects
+ - Merge branch 'release-0.5.1' into develop
+ - Merge branch 'release-0.5.1'
+ -     --- File location needs to be specified in update_crontab.php file since     it's being called remotely.
+ - Version bump to 0.5.1
+ - Merge branch 'userFeature' into develop
+ - Merge branch 'p4p' into develop
+ -     --- Implemented user session with roles in pure javascript
+ -     --- Added links to breadcrumbs
+ -     --- Added column filtering
+ -     --- Added patients for patients announcement     --- Fixed issue where post type was not inserted properly
+ -     --- Generalized constants and variable names     --- Added better support for distribution
+ -     --- Remove include once from all php scripts. Now in one htaccess!
+ -     --- Added patient activity
+ - Merge branch 'feedback' into develop
+ -     --- Added rating system view in educational material
+ -     --- Renamed all instances of ATO to opalAdmin (including directories)
+ - Merge branch 'release-0.5' into develop
+ - Merge branch 'release-0.5'
+ -     --- Minor UI fix
+ - Version bump to 0.5.0
+ - Merge branch 'newDesign' into develop
+ -     --- Final development in design branch     --- Prepared further development for future functionality
+ -     --- Implemented patient registration functionality
+ -     --- Further developments into the new design         -- Finished existing pages.         -- Working on new pages.
+ -     --- Further design changes
+ -     --- Redesigned educational material
+ -     --- Completed new alias page design update
+ -     --- Further implementation design change in newAlias
+ -     -- Redesigned home and Alias pages
+ -     -- Removed duplicate ignores
+ - Merge branch 'colorTag' into develop
+ -     -- Remove config from tracking
+ - Merge branch 'release-0.4' into develop
+ -     -- Included php config in ignore
+ - Merge branch 'release-0.4'
+ - Version bump to 0.4.0
+ - Merge branch 'demographics' into develop
+ -     --- Added demographic logic         -- Now users can filter by age group and sex
+ - Merge branch 'hotfix-0.3.3' into develop
+ - Merge branch 'hotfix-0.3.3'
+ -     --- Fixed issue where ARIA filters were not populated         -- Removed "use variansystem" and defined explicitly in FROM clause
+ -     --- Changed ARIA setting
+ -     --- For some reason this file got deleted. Added back in
+ - Merge branch 'hotfix-0.3.2' into develop
+ -     -- removed config.php from gitignore
+ - Merge branch 'hotfix-0.3.2'
+ -     --- Changed all static function calls to non-static function calls         -- All functions are non-static so calling a class function using "::" would throw an error         since that is a static function call. This was fixed by initializing a new object and         calling the object function using "->". This is a non-static function call.
+ - Version bump to 0.3.2
+ -     -- Removed file from tracking. SHOULD NOT BE THERE!
+ - Merge branch 'hotfix-0.3.1' into develop
+ - Merge branch 'hotfix-0.3.1'
+ -     --- Replaced overflow of text with ellipses on eahc Name column         -- Better readability.
+ - Version bump to 0.3.1
+ -     -- Ignored php configs
+ - Merge branch 'release-0.2' into develop
+ - Merge branch 'release-0.2'
+ - Version bump to 0.3.0
+ - Merge branch 'mediVisit' into develop
+ -     --- Ignored images directory
+ -     --- Implemented color tags.         Now icon colors can be chosen for each task, appointment and document for use in Opal.
+ - Merge branch 'hotfix-0.1.2'
+ -     --- Removed remote directory dependency.         Now hospital maps are generated locally.
+ - Version bump to 0.1.2
+ -     --- Updated gitignore to ignore images directory
+ -     --- Removed dependency of a remote directory for hospital maps.         Set images to show up locally.
+ -     --- Updated config file to use utf-8 charset in MySQL
+ - Merge branch 'hotfix-0.1.1' into develop
+ - Merge branch 'hotfix-0.1.1'
+ -     --- Fixed an issue that caused the alternation of EN and FR names and descriptions in Posts         Variables were set in opposite order.
+ - Version bump to 0.1.1
+ -     --- Updated gitignore to include config.php file.         Now each branch will have a respective config.php file to use the proper MySQL database.
+ -     -- Updated gitignore further to include config.php file for each branch.
+ -     --- Updated gitignore to include config.php file.         Now each branch will have a respective config.php file to use the proper MySQL database.
+ -     --- Updated gitignore to ignore master config file.         Now each branch will have a respective config.php file to use the proper MySQL database.
+ -     --- Added WaitRoomManagement source database functionality. Updated scripts accordingly.
+ - Merge branch 'release-0.1' into develop
+ - Merge branch 'release-0.1'
+ - Added VERSION and CHANGES files, Version bump to v0.1.0
+ -     -- Github issue #100..  Updated Alias logic to:         - Reassign alias serial if a new alias is using an existing expression         - Deny deletion of alias or expression if expression exists in dependent tables
+ -     -- New commit
+

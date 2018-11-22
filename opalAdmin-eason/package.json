@@ -1,0 +1,29 @@
+{
+  "name": "opaladmin",
+  "version": "0.13.0",
+  "description": "Administrative tool for Opal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/akimosupremo/opalAdmin.git"
+  },
+  "keywords": [
+    "opalAdmin"
+  ],
+  "author": "Ackeem B.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/akimosupremo/opalAdmin/issues"
+  },
+  "homepage": "https://gitlab.com/akimosupremo/opalAdmin#README",
+  "dependencies": {
+    "angular-ui-grid": "^4.0.2",
+    "angular-ui-sortable": "^0.19.0",
+    "eslint": "^3.18.0",
+    "express": "^4.15.3",
+    "firebase": "^3.7.6",
+    "firebase-admin": "^4.2.0",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "validate-commit-message": "^3.0.1"
+  }
+}

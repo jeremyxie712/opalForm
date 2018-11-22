@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<title>opal ADMIN</title>
+	<meta charset="utf-8">
+	<meta content="text/html; X-Content-Type-Options=nosniff" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+	<!-- Libraries -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src = "js/lib/jquery/jquery-ui.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+	<script src="bower_components/angular-translate/angular-translate.js"></script>
+	<script src="bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+	<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="bower_components/angular-multiple-date-picker/dist/multipleDatePicker.js"></script>
+	<script src="bower_components/angularjs-dropdown-multiselect/dist/angularjs-dropdown-multiselect.min.js"></script>
+	<script src="bower_components/ng-idle/angular-idle.js"></script>
+	<script src="bower_components/moment/moment.js"></script>
+	<script src="bower_components/moment-timezone/builds/moment-timezone.min.js"></script>
+	<script src="bower_components/moment-timezone/builds/moment-timezone-with-data.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="bower_components/rangy/rangy-core.js"></script>
+	<script src="bower_components/rangy/rangy-classapplier.js"></script>
+	<script src="bower_components/rangy/rangy-highlighter.js"></script>
+	<script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+	<script src="bower_components/rangy/rangy-serializer.js"></script>
+	<script src="bower_components/rangy/rangy-textrange.js"></script>
+	<script src="bower_components/textAngular/dist/textAngular.js"></script>
+	<script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+	<script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
+	<script src="bower_components/firebase/firebase.js"></script>
+	<script src="bower_components/cryptojslib/components/core.js"></script>
+	<script src="bower_components/cryptojslib/components/cipher-core.js"></script>
+	<script src="bower_components/cryptojslib/components/aes.js"></script>
+	<script src="bower_components/cryptojslib/components/mode-cfb-min.js"></script>
+	<script src="bower_components/cryptojslib/components/x64-core.js"></script>
+	<script src="bower_components/cryptojslib/components/sha512.js"></script>
+	<script src="bower_components/highcharts/highcharts.js"></script>
+	<script src="bower_components/highcharts-ng/dist/highcharts-ng.min.js"></script>
+
+
+	<script src="node_modules/angular-ui-grid/ui-grid.min.js"></script>
+	<script src="node_modules/angular-ui-sortable/dist/sortable.js"></script>
+	
+	<script src="js/lib/bootstrap/bootstrap-datetimepicker.min.js"></script>
+	<script src="js/lib/bootstrap/ui.bootstrap.materialPicker.js"></script>
+	<script src="js/lib/livicon/raphael-min.js"></script>
+	<script src="js/lib/livicon/livicons-1.4-custom.min.js"></script>
+	<script src="js/lib/itemSlide/itemslide.min.js"></script>
+	<script src="js/lib/require/require.js"></script>
+	<!-- <script src="js/lib/fontawesome/fontawesome-all.min.js"></script>
+	<script src="js/lib/fontawesome/fa-v4-shims.min.js"></script>-->
+
+
+	<!-- Start Up -->
+ 	<script type="text/javascript" src="js/app/app.js"></script>
+
+	<!-- Controller -->
+ 	<script type="text/javascript" src="js/app/controllers/controllers.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/application.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/navigation.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/alias/alias.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/alias/add.alias.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/alias/edit.alias.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/alias/delete.alias.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/alias/log.alias.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/post/post.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/post/add.post.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/post/edit.post.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/post/delete.post.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/post/log.post.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/educational-material/educationalMaterial.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/educational-material/add.educationalMaterial.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/educational-material/edit.educationalMaterial.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/educational-material/delete.educationalMaterial.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/educational-material/log.educationalMaterial.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/hospital-map/hospitalMap.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/hospital-map/add.hospitalMap.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/hospital-map/edit.hospitalMap.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/hospital-map/delete.hospitalMap.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/notification/notification.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/notification/add.notification.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/notification/edit.notification.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/notification/delete.notification.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/notification/log.notification.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/patient/patient.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/patient/block.patient.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/patient/edit.patient.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/patient/patientRegistration.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/patient/confirm.patientRegistration.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/patient/patientActivity.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/test-result/testResult.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/test-result/add.testResult.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/test-result/edit.testResult.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/test-result/delete.testResult.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/test-result/log.testResult.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/cron/cron.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/cron/log.cron.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/login/login.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/login/loginModal.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/user/account.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/user/user.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/user/add.user.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/user/edit.user.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/user/delete.user.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/user/log.user.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/install/installation.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/email/email.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/email/add.email.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/email/edit.email.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/email/delete.email.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/email/log.email.js"></script>
+
+ 	<script type="text/javascript" src="js/app/controllers/questionnaire/questionnaire.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/questionnaire/add.questionnaire.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/questionnaire/edit.questionnaire.js"></script>
+ 	<script type="text/javascript" src="js/app/controllers/questionnaire/delete.questionnaire.js"></script>
+
+	<script type="text/javascript" src="js/app/controllers/question/question.js"></script>
+	<script type="text/javascript" src="js/app/controllers/question/add.question.js"></script>
+	<script type="text/javascript" src="js/app/controllers/question/edit.question.js"></script>
+	<script type="text/javascript" src="js/app/controllers/question/delete.question.js"></script>
+
+	<script type="text/javascript" src="js/app/controllers/legacy-questionnaire/legacyQuestionnaire.js"></script>
+	<script type="text/javascript" src="js/app/controllers/legacy-questionnaire/add.legacyQuestionnaire.js"></script>
+	<script type="text/javascript" src="js/app/controllers/legacy-questionnaire/edit.legacyQuestionnaire.js"></script>
+	<script type="text/javascript" src="js/app/controllers/legacy-questionnaire/delete.legacyQuestionnaire.js"></script>
+	<script type="text/javascript" src="js/app/controllers/legacy-questionnaire/log.legacyQuestionnaire.js"></script>
+
+	<script type="text/javascript" src="js/app/controllers/diagnosis/diagnosisTranslation.js"></script>
+	<script type="text/javascript" src="js/app/controllers/diagnosis/add.diagnosisTranslation.js"></script>
+	<script type="text/javascript" src="js/app/controllers/diagnosis/edit.diagnosisTranslation.js"></script>
+	<script type="text/javascript" src="js/app/controllers/diagnosis/delete.diagnosisTranslation.js"></script>
+
+	<!-- Collection -->
+ 	<script type="text/javascript" src="js/app/collections/collections.js"></script>
+
+ 	<!-- Service -->
+ 	<script type="text/javascript" src="js/app/services/services.js"></script>
+
+	<!-- bower:css -->
+	<link rel="stylesheet" href="bower_components/textAngular/dist/textAngular.css" />
+	<link rel="stylesheet" type="text/css" href="bower_components/angular-multiple-date-picker/dist/multipleDatePicker.css">
+	<!-- endbower -->
+
+	<!-- bower:font -->
+	<!-- endbower -->
+
+	<!-- Stylesheets -->
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/jquery-ui.css">
+	<link media="all" type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/bootstrap-datetimepicker.css">
+	<link media="all" type="text/css" rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/animate.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/livicon.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/font-awesome.min.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/prettify.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/docs.min.css">
+	<link media="all" type="text/css" rel="stylesheet" href="bower_components/textAngular/dist/textAngular.css">
+	<link media="all" type="text/css" rel="stylesheet" href="css/lib/ui.bootstrap.materialPicker.css">
+	<link media="all" type="text/css" rel="stylesheet" href="bower_components/highcharts-ng/dist/highcharts-ng.css">
+
+	<link media="all" type="text/css" rel="stylesheet" href="css/style.css">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+</head>
+<body ng-app="opalAdmin" ng-controller="application">
+	<div ng-include="'templates/navbar-menu.html'" ></div>
+	<div id="page">
+		<div ui-view style="position: relative; height: inherit;"></div>
+		<div ng-if="build" class="app-version">
+			{{build.version}} ( E: {{build.environment}} - B: {{build.branch}})
+		</div>
+	</div>
+ 
+</body>
+</html>

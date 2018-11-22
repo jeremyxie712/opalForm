@@ -1,0 +1,46 @@
+# ignore configuration file
+config.json
+
+# ignore clinical documents
+publisher/clinical/documents/**
+# except readme
+!publisher/clinical/documents/README.md
+
+# ignore doctor uploads
+publisher/clinical/doctors/**
+# except readme
+!publisher/clinical/doctors/README.md
+
+# ignore certificates
+publisher/php/certificates/**
+# except readme
+!publisher/php/certificates/README.md
+
+# ignore swap files
+*.swp
+*.swo
+./**/*.swp
+./**/*.swo
+
+# ignore QR Images
+images/hospital-maps/qrCodes/**
+
+# ignore bower/node components
+bower_components
+node_modules/**
+# except firebase-admin
+!node_modules/firebase-admin 
+
+# ignore vscode editor config
+.editorconfig
+
+# ignore idea for PhpStorm
+.idea
+
+# ignore uploaded file paths
+uploads/**
+
+# ignore log files
+publisher/logs/**
+# except readme
+!publisher/logs/README.md
